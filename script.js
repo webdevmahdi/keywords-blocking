@@ -37,14 +37,18 @@ button.addEventListener('click', function () {
             content.appendChild(div);
         }
         else if(searchText === ''){
-            content.innerHTML = `
+            let div = document.createElement('div');
+            div.innerHTML = `
              <h1>Please wright something</h1>
             `;
+            content.appendChild(div);
         }
         else{
-            content.innerHTML = `
+            let div = document.createElement('div');
+            div.innerHTML = `
              <h1>Your data is loading...</h1>
             `;
+            content.appendChild(div);
         }
     }
     searchField.value = '';
