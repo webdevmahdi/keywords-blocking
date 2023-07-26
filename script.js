@@ -30,9 +30,11 @@ button.addEventListener('click', function () {
     content.textContent = '';
     for (let i = 0; i <= words.length; i++) {
         if (searchText === words[i]) {
-            content.innerHTML = `
+            let div = document.createElement('div');
+            div.innerHTML = `
              <h1>Please use right keywords</h1>
             `;
+            content.appendChild(div);
         }
         else if(searchText === ''){
             content.innerHTML = `
